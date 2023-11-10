@@ -1,5 +1,5 @@
 <?php
-//defined('BASEPATH') OR exit('No direct script access allowed');
+defined('BASEPATH') OR exit('No direct script access allowed');
 
 class homectr extends CI_Controller {
 	function __construct() {
@@ -10,19 +10,21 @@ class homectr extends CI_Controller {
         $this->load->library('session');
 	}
     public function index(){
+        $view['scripts_header'][] = base_url('assets/plugins/jQuery/jquery-3.7.1.js'); 
+		$view['scripts_header'][] = base_url('assets/plugins/notify/notify.min.js'); 
+    
+        $this->load->view('home/header', $view);
         $this->load->view('homeInicial');
     }
-    public function home_convidado()
-	{
+    public function home_convidado(){
         $this->load->view('homeInicial');
 	}
-    public function login()
-	{
-        $view['scripts_header'][] = 'https://code.jquery.com/jquery-3.3.1.js';
-        $view['scripts_header'][] = base_url('assets/plugins/notify/notify.js');
+    public function login(){
+        $view['scripts_header'][] = base_url('assets/plugins/jQuery/jquery-3.7.1.js'); 
+		$view['scripts_header'][] = base_url('assets/plugins/notify/notify.min.js'); 
     
-    
-        $this->load->view('login', $view);
+        $this->load->view('home/header', $view);
+        $this->load->view('login');
 	}
 	public function valida_login(){
         $jsonData = file_get_contents('php://input');

@@ -105,3 +105,22 @@ defined('BASEPATH') or exit('No direct script access allowed');
 	<script type="text/javascript">
 		var base_url = '<?= base_url(); ?>';
 	</script>
+	<?php
+		if (isset($links_header)) {
+			foreach ($links_header as $item) {
+				?>
+				<link rel="stylesheet" href="<?= $item ?>">
+
+				<?php
+			}
+		}
+
+		if (isset($scripts_header)) {
+			foreach ($scripts_header as $item) {
+				?>
+				<script src="<?= $item ?>" type="text/javascript"></script>
+				<?php
+			}
+		}
+    ?>
+

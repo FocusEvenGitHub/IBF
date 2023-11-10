@@ -58,6 +58,9 @@ $route['home'] = 'homectr/home_usuario';
 $route['convidado'] = 'homectr/home_convidado';
 $route['usuario'] = 'homectr/home_usuario';
 $route['login'] = 'homectr/login';
+$route['logout'] = 'homectr/logout';
 
 $route['valida_login'] = 'homectr/valida_login';
 $route['ajax_redirect'] = 'homectr/ajax_redirect';
+
+$route['home_user'] = 'homeuserctr/index';

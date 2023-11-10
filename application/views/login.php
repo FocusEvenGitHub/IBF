@@ -1,6 +1,5 @@
 <?php
 defined('BASEPATH') or exit('No direct script access allowed');
-require_once('header.php');
 ?>
 <script src="<?php echo (base_url('assets/js/login.js')) ?>" type="text/javascript"></script>
 <!-- <link rel="stylesheet" type="text/css" href="<?php //echo (base_url('assets/css/defaultHome.css')) ?>" /> -->
@@ -99,10 +98,7 @@ require_once('header.php');
 		<input id="senha" name="senha" type="password" placeholder="Insira sua Senha">
 		<div class="row">
 			<a style="cursor:pointer">
-				<button id="btn-logar" class="btn userlog">Entrar<br>como usuário</button>
-			</a>
-			<a href="<?= base_url('convidado') ?>">
-				<button id="btn-visita" class="btn uservisit">Entrar<br>como visitante</button>
+				<button id="btn-logar" class="btn userlog">Entrar</button>
 			</a>
 		</div>
 	</div>

@@ -24,15 +24,15 @@ $(document).ready(function () {
             success: function (retorno) {
                 console.log("Sucesso: " + retorno);
                 if (retorno == 3218181) {
-                    // $.notify('Usuário ou senha incorretos!', "warning");
-                    console.log('Usuário ou senha incorretos!');
+                    $.notify("Usuário ou senha incorretos!", "error");
+                    // console.log('Usuário ou senha incorretos!');
                 } else {
                     console.log('Usuário Válido!');
                     $.ajax({ //Ajax de redirecionamento
                         url: 'ajax_redirect',
                         type: 'POST',
                         async: true,
-                        data: { location: 'usuario' }
+                        data: { location: 'home_user' }
                     });
                 }
             },  

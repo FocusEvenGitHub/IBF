@@ -1,35 +1,9 @@
-#definir tamanho máximo de POST
-php_value post_max_size 20M
-php_value max_input_vars 10000
-php_value memory_limit 256M
-#configuração php
-php_value upload_max_filesize 20M
-
-php_value max_execution_time 999
-
-SetEnv ENVIRONMENT "local"
-#SetEnv ENVIRONMENT "testing"
-#SetEnv ENVIRONMENT "production"
-#SetEnv ENVIRONMENT "homologation"
-#
-#
 <IfModule mod_rewrite.c>
-RewriteEngine On
+    RewriteEngine On
+    RewriteBase /ibf/   
 
-RewriteCond %{REQUEST_FILENAME} !-f
-
-RewriteCond %{REQUEST_FILENAME} !-d
-
-RewriteCond $1 !^(index\.php|public|images|robots\.txt|css)
-
-RewriteRule ^(.*)$ index.php/$1 [L]
-
+    # Remove index.php da URL
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteRule ^(.*)$ index.php/$1 [L]
 </IfModule>
-
-
-<IfModule mod_speling.c>
-  CheckCaseOnly On
-  CheckSpelling On
-</IfModule>
-
-
