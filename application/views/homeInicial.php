@@ -344,7 +344,7 @@ require_once('header.php');
 
         <section class="destaques">
             
-            <p>Destaques</p>
+            <p>Os Destaques</p>
 
             <div class="destaques-carrossel">
                 <img src="https://i.ytimg.com/vi/qFKoRVjdFeA/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBKnIItSPqDdi4Ogl0Yz2gRQ27ipg" alt="Banner ibf news">
