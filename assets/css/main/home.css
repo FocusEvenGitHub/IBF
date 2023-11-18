@@ -1,0 +1,183 @@
+        body{
+            font-family: 'Poppins';
+        }
+
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        :root{
+            --azul-destaque: #129bdb;
+            --azul-hover: #0f75a4;
+        }
+        
+
+
+        .cabecalho{
+            padding: 0 1rem ;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 1rem ;
+        }
+
+        .cabecalho-esquerdo{
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .cabecalho-esquerdo .logo{
+            max-width: 3rem;
+            filter: saturate(0);
+            filter: brightness(0);
+
+        }
+
+        .cabecalho-esquerdo p{
+            font-size: 1rem;
+        }
+
+        .cabecalho-direito p{
+            font-size: 1rem;
+            font-weight: 500;
+            color: var(--azul-destaque);
+        }
+
+        .boas-vindas{
+            width: auto;
+            text-align: center;
+            background-color: #f2f2f2;
+            padding: 1rem 0;
+        }
+
+        .boas-vindas p{
+            color: var(--azul-destaque);
+            font-weight: 600;
+            font-size: 1.5rem;
+        }
+
+        .destaques{
+            width: auto;
+            margin: 2rem;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .destaques p{
+            font-size: 1.75rem;
+        }
+
+        .destaques-carrossel{
+            display: flex;
+            gap: 1rem;
+            padding: 1rem 0;
+            overflow: auto;
+            white-space: nowrap;
+            scroll-behavior: smooth;
+        }
+
+        ::-webkit-scrollbar {
+            width: .75rem;
+
+        }
+        ::-webkit-scrollbar-track {
+            border-radius: 100px;
+            transition: 0.3s;
+            width: 0.25rem;
+        }
+        
+        /* Handle */
+        ::-webkit-scrollbar-thumb {
+            background: #727272; 
+        }
+
+        /* Handle on hover */
+        ::-webkit-scrollbar-thumb:hover {
+            background: #525252;
+             
+        }
+        ::-webkit-scrollbar:horizontal {
+            height: .75rem;
+             /* Altura da barra de rolagem horizontal */
+        }
+
+        ::-webkit-scrollbar-thumb:horizontal {
+            background-color: var(--azul-destaque); 
+            border-radius: 5rem; 
+        }
+        ::-webkit-scrollbar-thumb:hover:horizontal {
+            background-color: var(--azul-hover);
+        }    
+        ::-webkit-scrollbar-track:horizontal {
+            background-color: #f1f1f1; 
+        }
+
+        .destaques-carrossel img{
+            border-radius: 1rem;
+            width: 40%;
+        }
+
+        .contribui{
+            margin: 2rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 1.5rem;
+        }
+
+        .contribui div{
+            margin: 1rem 0;
+            padding: 1.5rem 2rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            border-radius: 1rem;
+            gap: 1rem;
+            box-shadow: 0px 0px 25px #727272;
+        }
+
+        .contribui div p{
+            font-size: 1rem;
+        }
+
+        .icone{
+            width: 3rem;
+        }
+
+        .info-cultos{
+            margin: 1rem 0;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            gap: .75rem;
+        }
+
+        .fundo-cultos{
+            max-width: 100%;
+            padding: 1.25rem 6rem;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            align-items: center;
+            box-shadow: 0px 0px 8px #a0a0a0;
+            border-radius: .25rem;
+        }
+
+        .fundo-cultos div{
+            font-size: 1rem;
+        }
+
+        .fundo-cultos img{
+            aspect-ratio: 1/1;
+            object-fit: contain;
+            max-width: 4rem;
+        }
+        .horarios-cultos {
+            justify-content: space-between;
+            display: flex;
+            width: 40vw;
+            max-width: 30rem;
+        }

@@ -1,0 +1,106 @@
+
+        body{
+            font-family: 'Poppins';
+        }
+        
+        @media(min-width: 290px) and (max-width: 514px){
+
+            .cabecalho{
+                display: flex;
+                justify-content: space-between;
+                margin: 1rem 1.2rem;
+            }
+
+            .cabecalho-esquerdo{
+                display: flex;
+                align-items: center;
+                gap: 0.5rem;
+            }
+
+            .cabecalho-esquerdo .logo{
+                width: 1.5rem;
+                filter: saturate(0);
+                filter: brightness(0);
+
+            }
+
+            .cabecalho-esquerdo p{
+                font-size: 0.85rem;
+            }
+
+            .cabecalho-direito p{
+                font-size: .85rem;
+                font-weight: 500;
+                color: var(--azul-destaque);
+            }
+
+            .boas-vindas{
+                width: auto;
+                text-align: center;
+                background-color: #f2f2f2;
+                padding: 1rem 0;
+            }
+
+            .boas-vindas p{
+                color: var(--azul-destaque);
+                font-weight: 600;
+            }
+
+            .destaques p{
+                font-size: 1.25rem;
+            }
+
+            .destaques-carrossel{
+                overflow: auto;
+                white-space: nowrap;
+            }
+
+            .destaques-carrossel img{
+                width: 90%;
+            }
+
+            .contribui{
+                display: flex;
+                gap: 1rem;
+            }
+
+            .contribui div{
+                padding: 1rem 1.1rem;
+                box-shadow: 0px 5px 10px #929292;
+            }
+
+            .contribui div img{
+                width: 2rem;
+            }
+
+            .contribui div p{
+                font-size: 1rem;
+            }
+
+            .info-cultos{
+                margin: 1rem 0;
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                gap: .5rem;
+        }
+
+        .horarios-cultos{
+            padding: 1rem 3rem;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0px 0px 8px #a0a0a0;
+            border-radius: .75rem;
+            min-width: 14rem;
+        }
+
+        .horarios-cultos div{
+            font-size: .75rem;
+        }
+
+        .horarios-cultos img{
+            max-width: 3.5rem;
+        }
+        }
