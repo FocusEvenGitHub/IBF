@@ -41,7 +41,6 @@ $nome = $this->session->userdata('nome');
         .logo-header{
             display: flex;
             flex-direction:column;
-            padding: 1rem;
             gap: 0;
             overflow: hidden;
         }
@@ -85,39 +84,6 @@ $nome = $this->session->userdata('nome');
 </head>
 
 <body>
-    <aside class="aside">
-    <div class="logo-header cabecalho-esquerdo">
-            <span style="margin-bottom: 1rem;">
-                <img class="logo" src="<?php echo (base_url('assets/img/IBF-Logo.png'))?>" alt="Logo da IBF">
-                <p>Igreja Batista Filadélfia</p>
-            </span>
-            <a id="nav_home" href="<?php echo (base_url ('home_user')) ?>" class="nav">
-                <span>
-                    <i class="fas fa-home"></i>Início
-                </span>
-            </a>
-            <a href="#" class="nav">
-                <span>
-                    <i class="fas fa-user-friends"></i>Ministérios
-                </span>
-            </a>
-            <a href="#" class="nav">
-                <span>
-                    <i class="fas fa-book-open"></i>EBD
-                </span>
-            </a>
-            <a href="#" class="nav">
-                <span>
-                    <i class="fas fa-graduation-cap"></i>Cursos
-                </span>
-            </a>
-            <a href="#" class="nav">
-                <span>
-                    <i class="fas fa-child"></i>MIF
-                </span>
-            </a>
-    </div>
-    </aside>
     <main>
     
     <header class="boas-vindas">
@@ -132,7 +98,7 @@ $nome = $this->session->userdata('nome');
 
         <section class="destaques">
             
-            <p>Ministérios</p>
+            <p>Resumo das suas atividades</p>
             
         </section>
 

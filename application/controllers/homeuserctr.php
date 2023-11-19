@@ -20,4 +20,15 @@ class homeuserctr extends CI_Controller {
         $this->load->view('home/header', $view);
         $this->load->view('home_user/main_home', $view);
     }
+	public function ministerios(){
+		$view['scripts_header'][] = base_url('assets/plugins/jQuery/jquery-3.7.1.js'); 
+		$view['scripts_header'][] = base_url('assets/plugins/notify/notify.min.js'); // or notify.js
+        $view['scripts_header'][] = base_url('assets/js/home_user/ministerios.js');
+
+		$view['links_header'][] = 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css';
+
+
+        $this->load->view('home/header', $view);
+        $this->load->view('home_user/ministerios', $view);
+    }
 }

@@ -64,3 +64,4 @@ $route['valida_login'] = 'homectr/valida_login';
 $route['ajax_redirect'] = 'homectr/ajax_redirect';
 
 $route['home_user'] = 'homeuserctr/index';
+$route['user/ministerios'] = 'homeuserctr/ministerios';
