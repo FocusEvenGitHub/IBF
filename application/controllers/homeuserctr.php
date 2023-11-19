@@ -14,6 +14,9 @@ class homeuserctr extends CI_Controller {
 		$view['scripts_header'][] = base_url('assets/plugins/notify/notify.min.js'); // or notify.js
         $view['scripts_header'][] = base_url('assets/js/home_user/home_user.js');
 
+		$view['links_header'][] = 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css';
+
+
         $this->load->view('home/header', $view);
         $this->load->view('home_user/main_home', $view);
     }

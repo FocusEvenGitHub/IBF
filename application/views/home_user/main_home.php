@@ -33,13 +33,17 @@ $nome = $this->session->userdata('nome');
             align-items: center;
         }
         .aside{
-            width: 300px;
+            width: 355px;
             min-width: 5vw;
             height: 100%;
             background-color: #d5d0e1;
         }
         .logo-header{
+            display: flex;
+            flex-direction:column;
             padding: 1rem;
+            gap: 0;
+            overflow: hidden;
         }
         .logout{
             background-color: lightgray;
@@ -51,18 +55,68 @@ $nome = $this->session->userdata('nome');
         .logout:hover{
             border: 1px solid black;
         }
+        span{
+            display: flex;
+            width: 100%;
+            align-items: center;
+        }
+        span img, span i{
+            margin-right: 1rem;
+        }
+        .nav{
+            width:100%;
+            padding: 2rem;
+            background-color: #1a4f69;
+            color: #dcf8ff;
+            transition: all 0.5s;
+        }
+        .nav:hover{
+            color: white;
+            background-color: #6783df;
+        }
+        .active{
+            color: #000;
+            background-color: #fff;
+        }
+        span i{
+            font-size: 16pt;
+        }
     </style>
 </head>
 
 <body>
     <aside class="aside">
     <div class="logo-header cabecalho-esquerdo">
-        	<link rel="icon" href="<?php echo (base_url ('assets/IBF_logo.png' )) ?>" type="image/x-icon">
-
-            <img class="logo" src="<?php echo (base_url('assets/img/IBF-Logo.png'))?>" alt="Logo da IBF">
-            
-            <p>Igreja Batista Filadélfia</p>
-        </div>
+            <span style="margin-bottom: 1rem;">
+                <img class="logo" src="<?php echo (base_url('assets/img/IBF-Logo.png'))?>" alt="Logo da IBF">
+                <p>Igreja Batista Filadélfia</p>
+            </span>
+            <a id="nav_home" href="<?php echo (base_url ('home_user')) ?>" class="nav">
+                <span>
+                    <i class="fas fa-home"></i>Início
+                </span>
+            </a>
+            <a href="#" class="nav">
+                <span>
+                    <i class="fas fa-user-friends"></i>Ministérios
+                </span>
+            </a>
+            <a href="#" class="nav">
+                <span>
+                    <i class="fas fa-book-open"></i>EBD
+                </span>
+            </a>
+            <a href="#" class="nav">
+                <span>
+                    <i class="fas fa-graduation-cap"></i>Cursos
+                </span>
+            </a>
+            <a href="#" class="nav">
+                <span>
+                    <i class="fas fa-child"></i>MIF
+                </span>
+            </a>
+    </div>
     </aside>
     <main>
     
@@ -70,7 +124,7 @@ $nome = $this->session->userdata('nome');
         <p>Seja bem-vindo(a) <?=$nome?></p> 
 
         <a class="logout" href="<?php echo (base_url ('logout')) ?>">
-            <b>Logout</b>
+            <b>Deslogar</b>
         </a>
     </header>
 
