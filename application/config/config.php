@@ -323,7 +323,11 @@ $config['cache_query_string'] = false;
 | https://codeigniter.com/user_guide/libraries/encryption.html
 |
  */
-$config['encryption_key'] = '';
+// Gera 32 bytes aleatórios
+$randomBytes = random_bytes(32);
+// Converte para uma string legível
+$encryptionKey = bin2hex($randomBytes);
+$config['encryption_key'] = $encryptionKey;
 
 /*
 |--------------------------------------------------------------------------

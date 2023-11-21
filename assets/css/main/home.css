@@ -6,7 +6,10 @@
             margin: 0;
             padding: 0;
         }
-
+        *:hover{
+            text-decoration: none!important;
+        }
+    
         :root{
             --azul-destaque: #129bdb;
             --azul-hover: #0f75a4;

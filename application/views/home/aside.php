@@ -1,3 +1,4 @@
+<?php require_once('header.php'); ?>
 <aside class="aside">
     <div class="logo-header cabecalho-esquerdo">
             <span style="margin: 1rem; margin-left: 2rem;">
@@ -31,3 +32,4 @@
             </a>
     </div>
     </aside>
+<?php require_once('boasvindas.php'); ?>

@@ -39,7 +39,6 @@ defined('BASEPATH') or exit('No direct script access allowed');
 			}
 		}
 
-		require_once('aside.php');
     ?>
 	<!-- DataTables js  -->
 	<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.5/css/jquery.dataTables.css">
