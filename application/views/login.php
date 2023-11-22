@@ -4,6 +4,11 @@ defined('BASEPATH') or exit('No direct script access allowed');
 <script src="<?php echo (base_url('assets/js/login.js')) ?>" type="text/javascript"></script>
 <!-- <link rel="stylesheet" type="text/css" href="<?php //echo (base_url('assets/css/defaultHome.css')) ?>" /> -->
 <style>
+
+    :root{
+        --azul: #129BDB;
+    }
+
 	.row {
 		display: flex;
 		flex-direction: row;
@@ -27,7 +32,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
 		width: 500px;
 		height: 600px;
 		background-color: #f4f4f4;
-		border: 1px solid lightgray;
+		/* border: 1px solid lightgray; */
 		border-radius: 1rem;
 		box-shadow: 0px 10px 10px #0000003b;
 		display: flex;
@@ -43,9 +48,9 @@ defined('BASEPATH') or exit('No direct script access allowed');
 	.loginBx input {
 		margin: 0px 40px 20px 40px;
 		background-color: rgba(100, 100, 100, 0.1);
-		padding: 8px;
-		border-radius: 1rem;
-		border: 1px solid gray;
+		padding: 1rem;
+		border-radius: .75rem;
+		border: none;
 	}
 
 	.loginBx span {
@@ -60,26 +65,31 @@ defined('BASEPATH') or exit('No direct script access allowed');
 
 	.loginBx p {
 		color: #7d7d7d;
-		font-size: 10pt;
-		margin-bottom: 20px;
+		font-size: .9rem;
+		margin-bottom: 1.25rem;
 	}
 
 	.btn {
 		border-radius: 2rem;
 		font-weight: 800;
-		padding: 8px 24px;
-		margin: 16px;
+		padding: 1rem 2rem;
+		margin: 1rem;
 	}
 
 	.userlog {
-		border: 1px solid black;
-		background-color: #1162ff;
+        border:none;
+		background-color: var(--azul);
 		color: white;
+        cursor:pointer;
+        transition: 0.3s;
 	}
+    .userlog:hover{
+        filter:brightness(1.25);
+    }
 
 	.uservisit {
-		border: 1px solid #1162ff;
-		color: #1162ff;
+		border: 1px solid var(--azul);
+		color: var(--azul);
 	}
 </style>
 <script>
@@ -87,19 +97,26 @@ defined('BASEPATH') or exit('No direct script access allowed');
 </script>
 <section class="loginBg">
 	<div class="loginBx" name="form_login" id="form_login">
-		<img src="<?php echo (base_url('assets/IBF_logo.png')) ?>">
-		<div style="margin:0 40px;">
+		
+        <img src="<?php echo (base_url('assets/IBF-Logo.png')) ?>">
+		
+        <div style="margin:0 40px;">
 			<h1>Login</h1>
 			<p>Crie sua conta <a href="#">aqui</a></p>
 		</div>
-		<span> E-mail </span>
-		<input id="email" name="email" type="email" placeholder="Insira seu E-mail">
+		
+        <span> E-mail </span>
+		
+        <input class="campo-usuario" id="email" name="email" type="email" placeholder="Insira seu E-mail">
+
 		<span> Senha </span>
-		<input id="senha" name="senha" type="password" placeholder="Insira sua Senha">
-		<div class="row">
-			<a style="cursor:pointer">
-				<button id="btn-logar" class="btn userlog">Entrar</button>
-			</a>
+
+		<input class="campo-usuario" id="senha" name="senha" type="password" placeholder="Insira sua Senha">
+		
+        <div class="row">
+			
+			<button id="btn-logar" class="btn userlog">Entrar</button>
+			
 		</div>
 	</div>
 </section>
