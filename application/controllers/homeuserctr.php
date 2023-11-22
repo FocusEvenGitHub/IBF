@@ -19,10 +19,11 @@ class homeuserctr extends CI_Controller {
         $view['scripts_header'][] = base_url('assets/js/home_user/home_user.js');
 
 		$view['links_header'][] = 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css';
+		$view['links_header'][] = base_url ('assets/css/main/font.css' );
 		$view['links_header'][] = base_url ('assets/css/main/home.css' );
 		$view['links_header'][] = base_url ('assets/css/user/homeUser.css' );
 
-
+		$view["title"] = "Início";
         $this->load->view('home/aside', $view);
         $this->load->view('home_user/main_home', $view);
     }
@@ -32,10 +33,11 @@ class homeuserctr extends CI_Controller {
         $view['scripts_header'][] = base_url('assets/js/home_user/ministerios.js');
 
 		$view['links_header'][] = 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css';
+		$view['links_header'][] = base_url ('assets/css/main/font.css' );
 		$view['links_header'][] = base_url ('assets/css/main/home.css' );
 		$view['links_header'][] = base_url ('assets/css/user/homeUser.css' );
 
-
+		$view["title"] = "Ministérios";
         $this->load->view('home/aside', $view);
         $this->load->view('home_user/ministerios', $view);
     }

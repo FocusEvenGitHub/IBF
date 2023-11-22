@@ -1,6 +1,6 @@
 <header class="boas-vindas">
         <div>
-            <p> --- </p>
+            <p> <?= $title ?> </p>
         </div>
         <div>
         <a class="logout" href="<?php echo (base_url ('logout')) ?>" style="margin-right: 1rem;">
