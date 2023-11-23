@@ -28,7 +28,7 @@ class Tb_usuario extends CI_Model {
 
     public function validar_login($email, $senha) {
         $SQL = "SELECT 
-                id,
+                id_usuario,
                 cpf,
                 nome,
                 email,

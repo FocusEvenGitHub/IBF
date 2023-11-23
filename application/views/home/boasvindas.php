@@ -2,7 +2,7 @@
         <div>
             <p> <?= $title ?> </p>
         </div>
-        <div>
+        <div style="align-items: center; display: flex;">
         <a class="logout" href="<?php echo (base_url ('logout')) ?>" style="margin-right: 1rem;">
             <i class="fa-solid fa-right-from-bracket"></i>
             <b>Deslogar</b>

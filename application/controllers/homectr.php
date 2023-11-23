@@ -42,7 +42,7 @@ class homectr extends CI_Controller {
                 $ipUsuario = getenv("REMOTE_ADDR");
                 $nome = $r->nome;
                 $email = $r->email;
-                $id_usuario = $r->id;
+                $id_usuario = $r->id_usuario;
             }
         } else {
             $nome = "";
