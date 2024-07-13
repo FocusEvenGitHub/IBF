@@ -7,6 +7,7 @@ class homeuserctr extends CI_Controller {
 		$this->load->database();
 		$this->load->model('Tb_usuario');
 		$this->load->helper('url');
+		$this->load->helper('form');
         $this->load->library('session');
 		if (!$this->session->userdata('id_usuario')) {
 			// Se o usuário não estiver logado, redirecionar para a página de login
@@ -54,5 +55,23 @@ class homeuserctr extends CI_Controller {
 		$view["title"] = "Configuração";
         $this->load->view('home/aside', $view);
         $this->load->view('home_user/config/config_user', $view);
+	}
+
+	public function configConta(){
+		$view['scripts_header'][] = base_url('assets/plugins/jQuery/jquery-3.7.1.js'); 
+		$view['scripts_header'][] = base_url('assets/plugins/notify/notify.min.js'); // or notify.js
+        $view['scripts_header'][] = base_url('assets/js/home_user/config.js');
+
+		$view['links_header'][] = 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css';
+		$view['links_header'][] = base_url ('assets/css/main/font.css' );
+		$view['links_header'][] = base_url ('assets/css/main/home.css' );
+		$view['links_header'][] = base_url ('assets/css/user/homeUser.css' );
+
+		$id = $this->session->id_usuario;
+		$view['user'] = $this->Tb_usuario->get_user_by_id($id);
+
+		$view["title"] = "Minha Conta";
+        $this->load->view('home/aside', $view);
+        $this->load->view('home_user/config/configContaView', $view);
 	}
 }

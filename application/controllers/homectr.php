@@ -12,6 +12,7 @@ class homectr extends CI_Controller {
     public function index(){
         $view['scripts_header'][] = base_url('assets/plugins/jQuery/jquery-3.7.1.js'); 
 		$view['scripts_header'][] = base_url('assets/plugins/notify/notify.min.js'); 
+		$view["title"] = "IBF | Inicio";
     
         $this->load->view('home/header', $view);
         $this->load->view('homeInicial');
@@ -22,6 +23,7 @@ class homectr extends CI_Controller {
     public function login(){
         $view['scripts_header'][] = base_url('assets/plugins/jQuery/jquery-3.7.1.js'); 
 		$view['scripts_header'][] = base_url('assets/plugins/notify/notify.min.js'); 
+		$view["title"] = "IBF | Login";
     
         $this->load->view('home/header', $view);
         $this->load->view('login');

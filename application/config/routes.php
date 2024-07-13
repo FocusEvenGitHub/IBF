@@ -66,3 +66,14 @@ $route['ajax_redirect'] = 'homectr/ajax_redirect';
 $route['home_user'] = 'homeuserctr/index';
 $route['user/config'] = 'homeuserctr/config';
 $route['user/ministerios'] = 'homeuserctr/ministerios';
+
+
+//-------- HOME_USER / CONFIG_CONTA
+$route['user/config_conta'] = 'homeuserctr/configConta';
+$route['users'] = 'users/index';
+$route['users/create'] = 'users/create';
+$route['users/store'] = 'users/store';
+$route['users/edit/(:any)'] = 'users/edit/$1';
+$route['users/update/(:any)'] = 'users/update/$1';
+$route['users/delete/(:any)'] = 'users/delete/$1';
+

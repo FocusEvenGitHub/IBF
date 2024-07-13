@@ -75,15 +75,16 @@ $query_builder = TRUE;
 
 $localIP = 'DESKTOP-SMTBBOP\SQLEXPRESS01';
 //var_dump($_SERVER['REMOTE_ADDR'],$_SERVER['REMOTE_HOST']); die;
-$mysql = true;
+$mysql = false;
 if ($mysql = true) {
   $db['default'] = array(
     'dsn' => '',
     'hostname' => 'localhost',
-    'username' => 'root',  // Change this to your MySQL username
-    'password' => '',      // Change this to your MySQL password
-    'database' => 'ibf',  // Replace with your database name
-    'dbdriver' => 'mysqli',
+    'username' => 'henry.sampaio',  
+    'password' => '06235554176',      
+    'database' => 'ibf',  
+    'dbdriver' => 'pdo',
+    'subdriver'=> 'sqlsrv',
     'dbprefix' => '',
     'pconnect' => FALSE,
     'db_debug' => (ENVIRONMENT !== 'production'),
@@ -97,5 +98,28 @@ if ($mysql = true) {
     'stricton' => FALSE,
     'failover' => array(),
     'save_queries' => TRUE
-);
+  );
+}else{
+  $db['default'] = array(
+    'dsn' => '',
+    'hostname' => 'localhost',
+    'username' => 'henry.sampaio',  
+    'password' => '06235554176',      
+    'database' => 'ibf',  
+    'dbdriver' => 'pdo',
+    'subdriver'=> 'sqlsrv',
+    'dbprefix' => '',
+    'pconnect' => FALSE,
+    'db_debug' => (ENVIRONMENT !== 'production'),
+    'cache_on' => FALSE,
+    'cachedir' => '',
+    'char_set' => 'utf8',
+    'dbcollat' => 'utf8_general_ci',
+    'swap_pre' => '',
+    'encrypt' => FALSE,
+    'compress' => FALSE,
+    'stricton' => FALSE,
+    'failover' => array(),
+    'save_queries' => TRUE
+  );
 }

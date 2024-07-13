@@ -5,7 +5,28 @@ if (!defined('BASEPATH'))
 
 class Tb_usuario extends CI_Model {
 
+    public function get_users() {
+        return $this->db->get('TB_USUARIO')->result();
+    }
     
+    public function create_user($data) {
+        return $this->db->insert('TB_USUARIO', $data);
+    }
+    
+    public function get_user_by_id($id) {
+        return $this->db->get_where('TB_USUARIO', array('id_usuario' => $id))->row();
+    }
+    
+    public function update_user($id, $data) {
+        $this->db->where('id', $id);
+        return $this->db->update('TB_USUARIO', $data);
+    }
+    
+    public function delete_user($id) {
+        $this->db->where('id', $id);
+        return $this->db->delete('TB_USUARIO');
+    }
+
     public function populaPerfil() {
         $this->db->select("*");
         $this->db->where("coordenacao", "CGCONT");
